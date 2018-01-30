@@ -6,12 +6,12 @@ desc = "You did it!"
 
 headers = {'Content-Type': 'application/json'}
 url = "http://127.0.0.1:8080/message/new"
-body = {'message': desc}
+body = ({'message': desc})
 
 r = requests.post(
     headers=headers,
     url=url,
-    data=body
+    json=body
 )
 
 print(body)
